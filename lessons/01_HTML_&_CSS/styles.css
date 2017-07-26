@@ -1,0 +1,19 @@
+div {
+    background: #ccc;
+    color: #333;
+    width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+}
+h1 {
+    text-align: center !important;
+}
+
+h1#header {
+    color: green;
+}
+
+p.text-right {
+    text-align: right;
+}
+
