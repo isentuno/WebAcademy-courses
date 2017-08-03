@@ -19,10 +19,12 @@ foreach ($colors as $value) {
 
 $numbers = [1, 2, 3, 4, 5];
 
-foreach ($numbers as $key => $value) {
-    // $value += 1; // <- WRONG
-    // echo $value, '<br>';
-    $numbers[$key] += 10;
+foreach ($numbers as $key => $number) {
+    // $number += 10; // <- WRONG
+    // echo $number, '<br>';
+    if ($number % 2) {
+        $numbers[$key] += 10;
+    }
 }
 
 echo '<pre>';

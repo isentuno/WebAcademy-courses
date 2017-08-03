@@ -11,7 +11,7 @@ while($x <= 5) {
 echo '<br><br>';
 
 // Do...While Loop
-$x = 1;
+$x = 6;
 
 do {
     echo "The number is: $x <br>";
