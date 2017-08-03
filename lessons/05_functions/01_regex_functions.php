@@ -9,7 +9,7 @@ if (php_sapi_name() === 'cli') {
 
 // The "i" after the pattern delimiter indicates a case-insensitive search
 if (preg_match("/php/i", "PHP is the web scripting language of choice.")) {
-    echo "A match was found1.", LS;
+    echo "A match was found 1.", LS;
 } else {
     echo "A match was not found.", LS;
 }
@@ -17,7 +17,7 @@ if (preg_match("/php/i", "PHP is the web scripting language of choice.")) {
 /* The \b in the pattern indicates a word boundary, so only the distinct
  * word "web" is matched, and not a word partial like "webbing" or "cobweb" */
 if (preg_match("/\bweb\b/i", "PHP is the web scripting language of choice.")) {
-    echo "A match was found2.", LS;
+    echo "A match was found 2.", LS;
 } else {
     echo "A match was not found.", LS;
 }

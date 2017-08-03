@@ -50,12 +50,13 @@ echo print_r($arrayFromStr, php_sapi_name() == 'cli');
 echo LS;
 
 // implode
-echo implode(" ", $arrayFromStr), LS;
+echo implode("_", $arrayFromStr), LS;
 
 echo LS;
 
-trim
-echo trim("                      A lot of space here           "), LS;
+$spacedString ="                      A lot of space here           ";
+echo ($spacedString), LS;
+echo trim ($spacedString), LS;
 echo trim("'I am quoted string'", "'"), LS;
 echo trim($str, "Hed!"), LS;
 
@@ -68,7 +69,7 @@ echo print_r(str_split($str, 4), php_sapi_name() == 'cli'), LS;
 echo LS;
 
 // strcmp
-echo strcmp($str, "Hello World"), LS;           // the two strings are equal
+echo strcmp($str, "Hello World,"), LS;           // the two strings are equal
 echo strcmp($str, "Hello"), LS;                 // string1 is greater than string2
 echo strcmp($str, "Hello world! Hello!"), LS;   // string1 is less than string2
 
@@ -91,7 +92,7 @@ echo md5($str), LS, LS;
 // number_format
 echo number_format("1000000"), LS;
 echo number_format("1000000", 4), LS;
-echo number_format("1000000", 2, ",", "."), LS, LS;
+echo number_format("1000000", 2, ",", "'"), LS, LS;
 
 // printf
 $number = 9;
