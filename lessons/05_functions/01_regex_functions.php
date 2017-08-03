@@ -23,7 +23,7 @@ if (preg_match("/\bweb\b/i", "PHP is the web scripting language of choice.")) {
 }
 
 // get host name from URL
-preg_match('@^(?:http://)?([^/]+)@i', "http://www.php.net/index.html", $matches);
+preg_match('@^(?:https?://)?([^/]+)@i', "https://www.php.net/index.html", $matches);
 
 // echo "<pre>";
 // print_r($matches);
@@ -38,10 +38,10 @@ echo "domain name is: {$matches[0]}", LS;
 
 // ==============================================================================
 
-$string = 'The quick brown fox jumps over the lazy dog.';
+$string = 'The quick brown fox jumps over the lazy dog. QUICK';
 
 $patterns = [
-    '/quick/',
+    '/quick/i',
     '/brown/',
     '/fox/',
 ];
@@ -59,6 +59,6 @@ echo preg_replace($patterns, $replacements, $string), LS;
 $str = 'hypertext language programming';
 $chars = preg_split('/ /', $str, -1, PREG_SPLIT_OFFSET_CAPTURE);
 
-// echo "<pre>";
+echo "<pre>";
 print_r($chars);
 

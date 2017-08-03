@@ -6,6 +6,7 @@ if (php_sapi_name() === 'cli') {
     define('LS', '<br>');
 }
 $str = "Hello World";
+echo "<pre>";
 // =================================================
 
 // strlen
@@ -36,7 +37,7 @@ echo LS;
 echo str_replace("World", "Peter", $str), LS;
 // echo str_replace("{%name%}", "Peter", $str), LS;
 
-$colors = array("blue", "red", "green", "yellow", "red");
+$colors = array("blue", "red", "green", "yellow", "red", "pink");
 echo print_r(str_replace("red", "pink", $colors, $i), php_sapi_name() == 'cli');
 echo "Replacements: $i", LS;
 
@@ -54,15 +55,15 @@ echo implode(" ", $arrayFromStr), LS;
 
 echo LS;
 
-trim
-echo trim("                      A lot of space here           "), LS;
+$spacedString = "                      A lot of space here           ";
+echo $spacedString, LS;
+echo trim($spacedString), LS;
 echo trim("'I am quoted string'", "'"), LS;
 echo trim($str, "Hed!"), LS;
 
 echo LS;
 
 // str_split
-echo "<pre>";
 echo print_r(str_split($str, 4), php_sapi_name() == 'cli'), LS;
 
 echo LS;
