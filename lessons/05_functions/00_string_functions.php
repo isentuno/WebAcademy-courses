@@ -6,6 +6,10 @@ if (php_sapi_name() === 'cli') {
     define('LS', '<br>');
 }
 $str = "Hello World";
+<<<<<<< HEAD
+=======
+echo "<pre>";
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 // =================================================
 
 // strlen
@@ -36,7 +40,11 @@ echo LS;
 echo str_replace("World", "Peter", $str), LS;
 // echo str_replace("{%name%}", "Peter", $str), LS;
 
+<<<<<<< HEAD
 $colors = array("blue", "red", "green", "yellow", "red");
+=======
+$colors = array("blue", "red", "green", "yellow", "red", "pink");
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 echo print_r(str_replace("red", "pink", $colors, $i), php_sapi_name() == 'cli');
 echo "Replacements: $i", LS;
 
@@ -50,6 +58,7 @@ echo print_r($arrayFromStr, php_sapi_name() == 'cli');
 echo LS;
 
 // implode
+<<<<<<< HEAD
 echo implode("_", $arrayFromStr), LS;
 
 echo LS;
@@ -57,19 +66,35 @@ echo LS;
 $spacedString ="                      A lot of space here           ";
 echo ($spacedString), LS;
 echo trim ($spacedString), LS;
+=======
+echo implode(" ", $arrayFromStr), LS;
+
+echo LS;
+
+$spacedString = "                      A lot of space here           ";
+echo $spacedString, LS;
+echo trim($spacedString), LS;
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 echo trim("'I am quoted string'", "'"), LS;
 echo trim($str, "Hed!"), LS;
 
 echo LS;
 
 // str_split
+<<<<<<< HEAD
 echo "<pre>";
+=======
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 echo print_r(str_split($str, 4), php_sapi_name() == 'cli'), LS;
 
 echo LS;
 
 // strcmp
+<<<<<<< HEAD
 echo strcmp($str, "Hello World,"), LS;           // the two strings are equal
+=======
+echo strcmp($str, "Hello World"), LS;           // the two strings are equal
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 echo strcmp($str, "Hello"), LS;                 // string1 is greater than string2
 echo strcmp($str, "Hello world! Hello!"), LS;   // string1 is less than string2
 
@@ -92,7 +117,11 @@ echo md5($str), LS, LS;
 // number_format
 echo number_format("1000000"), LS;
 echo number_format("1000000", 4), LS;
+<<<<<<< HEAD
 echo number_format("1000000", 2, ",", "'"), LS, LS;
+=======
+echo number_format("1000000", 2, ",", "."), LS, LS;
+>>>>>>> fca68adfdcb1194a9427b3a4238d7407fc9652c1
 
 // printf
 $number = 9;
