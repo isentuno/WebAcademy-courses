@@ -110,6 +110,14 @@ if (array_key_exists("BMW", $array)) {
 }
 
 
+//unque values in array
+
+$array = [1,1,1,2,3,1,2,3,];
+
+
+print_r(array_unique($array));
+
+
 
 
 
