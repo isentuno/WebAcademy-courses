@@ -12,7 +12,7 @@ echo '============================<br>';
 
 // Shift
 $array = array("a" => "red", "b" => "green", "c" => "blue");
-echo array_shift($array);
+echo array_shift($array), "<br>";
 print_r($array);
 
 echo '============================<br>';
@@ -28,7 +28,7 @@ echo '============================<br>';
 $array = array("red", "green", "blue");
 $last = array_pop($array);
 print_r($array);
-echo $last;
+echo $last, "<br>";
 
 echo '============================<br>';
 echo '============================<br>';
@@ -39,16 +39,16 @@ $array1 = array("red", "green");
 $array2 = array("blue", "yellow");
 print_r(array_merge($array1, $array2));
 
-$params = ['Search' => 'Andrew'];
 $default = ['Limit' => 10];
+$params = ['Search' => 'Andrew', 'Limit' => 20];
 
 echo '<br><br>';
-print_r(array_merge($params, $default));
+print_r(array_merge($default, $params));
 
 
 $params = ['Search' => 'Andrew', 'Limit' => 20];
 $params += [
-    'Limit' => 10
+    'Limit' => 10,
 ];
 
 echo '<br>----------------------<br>';
@@ -59,7 +59,7 @@ echo '============================<br>';
 
 // Count
 $cars = array("Volvo", "BMW", "Toyota", [1, 3, 5]);
-echo count($cars); // 3
+echo count($cars), "<br>"; // 4
 
 echo '============================<br>';
 
@@ -72,7 +72,7 @@ if (in_array("Glenn", $people)) {
     echo "Match not found";
 }
 
-echo '============================<br>';
+echo '<br>============================<br>';
 
 // List
 $myArray = array("Dog", "Cat", "Horse");
@@ -81,22 +81,22 @@ list($a, $b, $c) = $myArray;
 // $a = $myArray[0];
 // $b = $myArray[1];
 // $c = $myArray[2];
-echo "I have several animals, a $a, a $b and a $c.";
+echo "I have several animals, a $a, a $b and a $c.", "<br>";
 
 // echo '============================<br>';
 
 // Compact
-$firstname = "Peter";
-$lastname = "Griffin";
+$firstName = "Peter";
+$lastName = "Griffin";
 $age = "41";
 
 // $result = [
-//     'firstname' => $firstname,
-//     'lastname'  => $lastname,
+//     'firstName' => $firstName,
+//     'lastName'  => $lastName,
 //     'age'       => $age,
 // ];
 
-$result = compact("firstname", "lastname", "age");
+$result = compact("firstName", "lastName", "age");
 print_r($result);
 
 echo '============================<br>';
@@ -109,6 +109,14 @@ if (array_key_exists("BMW", $array)) {
     echo "Key does not exist!";
 }
 
+echo '<br>============================<br>';
+
+
+// Unique values in array
+
+$array = [1,1,1,2,3,1,2,3];
+
+print_r(array_unique($array));
 
 
 
