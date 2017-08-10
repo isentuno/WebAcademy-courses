@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 example_website
 example_styles.css
 output.txt
 output2.txt
+=======
+*
+!.gitignore
+!test.png
+>>>>>>> facbf10b174c4d0246887f5b37dd05ee413c0d62
