@@ -2,10 +2,16 @@
 
 session_start();
 
+<<<<<<< HEAD
 error_log(print_r($_SESSION,1));
 
 if (isset($_SESSION['UserId'])) {
     header('Location: welcome.php');
+=======
+if (isset($_SESSION['UserId'])) {
+    header('Location: welcome.php');
+    exit;
+>>>>>>> 7744e298f2370f4b75ae6c8e700db924c1c52fca
 }
 
 ?>
