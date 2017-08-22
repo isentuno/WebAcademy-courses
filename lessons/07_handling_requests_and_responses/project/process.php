@@ -17,10 +17,12 @@ $data = [
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (!strlen(trim($_POST['email'])) || !strlen(trim($_POST['password']))) {
+    if (!isset($_POST['email']) || !isset($_POST['password'])) {
         error_log('Here');
         die('Email and password required. Back to <a href="index.php">Home</a>');
-    }
+    } elseif (!strlen(trim($_POST['email'])) || !strlen(trim($_POST['password'])))
+        die('Email and password cannot be empty. Back to <a href="index.php">Home</a>');
+
 
     foreach ($data as $key => $item) {
         if ($item['email'] == trim($_POST['email'])

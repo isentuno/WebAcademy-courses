@@ -6,6 +6,7 @@ session_start();
 
 if (!isset($_SESSION['UserId'])) {
     header('Location: index.php');
+    exit;
 }
 
 ?>
@@ -22,7 +23,7 @@ if (!isset($_SESSION['UserId'])) {
     <div class="container">
         <div class="jumbotron" style="margin: 20px">
             <div class="row">
-                <h2 class="text-center">Hello, user!</h2>
+                <h2 class="text-center">Hello, Man!</h2>
 
                 <form action="logout.php" method="POST">
                     <button type="submit" class="btn btn-danger">Logout</button>
